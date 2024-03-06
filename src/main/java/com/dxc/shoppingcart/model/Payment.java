@@ -1,70 +1,26 @@
 package com.dxc.shoppingcart.model;
 
+import com.dxc.shoppingcart.model.Enums.PaymentMode;
+import com.dxc.shoppingcart.model.Enums.PaymentStatus;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+@Entity(name="PaymentTable")
 public class Payment {
     
-
-	private String paymentId;
-    private String orderId; // Every payment to be Mapped with an order
+	@Id
+	@GeneratedValue
+	private Long paymentId;
+    private Long orderId; // Every payment to be Mapped with an order
     private PaymentMode paymentMode;
     private PaymentStatus paymentStatus;
 
-    public Payment(String paymentId, String orderId, PaymentMode paymentMode, PaymentStatus paymentStatus) {
-		super();
-		this.paymentId = paymentId;
-		this.orderId = orderId;
-		this.paymentMode = paymentMode;
-		this.paymentStatus = paymentStatus;
-	}
-    
-    
-    public enum PaymentMode {
-        CREDIT_CARD,
-        DEBIT_CARD,
-        NET_BANKING,
-        UPI,
-        CASH_ON_DELIVERY
-    }
-
-    public enum PaymentStatus {
-        FUNDS_LOCKED,
-        FUNDS_UNLOCKED,
-        PAYMENT_RECEIVED,
-        PAYMENT_FAILED
-    }
-
-
-public String getPaymentId() {
-		return paymentId;
-	}
-
-	public void setPaymentId(String paymentId) {
-		this.paymentId = paymentId;
-	}
-
-	public String getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(String orderId) {
-		this.orderId = orderId;
-	}
-
-	public PaymentMode getPaymentMode() {
-		return paymentMode;
-	}
-
-	public void setPaymentMode(PaymentMode paymentMode) {
-		this.paymentMode = paymentMode;
-	}
-
-	public PaymentStatus getPaymentStatus() {
-		return paymentStatus;
-	}
-
-	public void setPaymentStatus(PaymentStatus paymentStatus) {
-		this.paymentStatus = paymentStatus;
-	}
-
-
+   
 
 }

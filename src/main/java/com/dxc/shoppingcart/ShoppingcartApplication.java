@@ -16,12 +16,16 @@ public static UserRepository repo;
 	public static void main(String[] args) {
 		SpringApplication.run(ShoppingcartApplication.class, args);
 		
-//		User user1= new User( "Ron", "dummy123"," catstreet653",  763292222L,"sas@gmail.com");
-//		User user2= new User( "Ron", "dummy123"," catstreet653",  763292222L,"sas@gmail.com");
-//		
+		User user1= new User("Ron", "dummy123"," catstreet653",  763292222L,"sas@gmail.com");
+		User user2= new User("Ron", "dummy123"," catstreet653",  763292222L,"sas@gmail.com");		
 //
-//			repo.save(user1);
-//			repo.save(user2);
+		try {
+		repo.save(user1);
+		repo.save(user2);
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 //			
 //		}
 		
