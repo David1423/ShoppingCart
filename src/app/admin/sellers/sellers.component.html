@@ -1,0 +1,23 @@
+<h2>Sellers</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Mobile Number</th>
+      <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let seller of sellers">
+      <td>{{seller.id}}</td>
+      <td>{{seller.username}}</td>
+      <td>{{seller.email}}</td>
+      <td>{{seller.address}}</td>
+      <td>{{seller.mobileNumber}}</td>
+      <td>Delete</td>
+      </tr>
+  </tbody>
+</table>

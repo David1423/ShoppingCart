@@ -1,0 +1,130 @@
+{
+  "seller": [
+    {
+      "id": "5bcc",
+      "username": "Ranjani",
+      "password": "Ranju@12",
+      "email": "ranjani@gmail.com",
+      "address": "3A/B, Trichy, Tamilnadu",
+      "mobileNumber": "7654329753"
+    }
+  ],
+  "products": [
+    {
+      "productName": "Boat Earbuds",
+      "productPrice": "1699",
+      "productCategory": "Electronics",
+      "productDescription": "Earbuds",
+      "productImage": "https://www.boat-lifestyle.com/cdn/shop/products/d6f427fc-0529-40e5-824b-cb849c1943ce_53eae3b9-6058-428c-aad1-f881e93dee87_288x.png?v=1629538280",
+      "id": "3867"
+    },
+    {
+      "productName": "Mixer Grinder",
+      "productPrice": "7999",
+      "productCategory": "Home appliances",
+      "productDescription": "preethi grinder",
+      "productImage": "https://nandilathgmart.com/wp-content/uploads/2020/07/zodiac-47d.png",
+      "id": "2b31"
+    },
+    {
+      "productName": "Iphone 15",
+      "productPrice": "89999",
+      "productCategory": "mobile",
+      "productDescription": "Get to know iPhone 15. USB-C. iOS 17.",
+      "productImage": "https://img.freepik.com/premium-psd/realistic-iphone-14-pro-max-3d-smartphone-screen-mockup-template-with-editable-background-psd_349001-545.jpg",
+      "id": "6d26"
+    },
+    {
+      "productName": "Iphone 15 pro",
+      "productPrice": "99999",
+      "productCategory": "mobile",
+      "productDescription": "Get to know iPhone 15 Pro. iOS 17. A17 Pro chip.",
+      "productImage": "https://atlas-content-cdn.pixelsquid.com/assets_v2/324/3240251740192248889/jpeg-600/G03.jpg?modifiedAt=1",
+      "id": "6f4f"
+    },
+    {
+      "id": "5768",
+      "productName": "Red Soft Toy Teddy",
+      "productPrice": 499,
+      "productCategory": "Toys",
+      "productDescription": "Teddy bear is made with high-quality soft material",
+      "productImage": "https://miniwhale.in/wp-content/uploads/2023/01/1-22.png"
+    },
+    {
+      "productName": "Intex 32 inch LED TV",
+      "productPrice": "11999",
+      "productCategory": "Home appliances",
+      "productDescription": "Intex 32 inch HD Smart Android 9.0 LED TV",
+      "productImage": "https://www.intex.in/cdn/shop/products/3263.jpg?v=1648711134",
+      "id": "ae57"
+    }
+  ],
+  "users": [
+    {
+      "id": "a020",
+      "username": "Ranjani",
+      "password": "Ranju@12",
+      "email": "ranjani@gmail.com",
+      "address": "3A/B, Trichy, Tamilnadu",
+      "mobileNumber": "7654329753"
+    },
+    {
+      "id": "62b6",
+      "username": "Keerthana",
+      "password": "Keerthu@12",
+      "email": "keerthana@gmail.com",
+      "address": "3A/B, Trichy, Tamilnadu",
+      "mobileNumber": "7654329753"
+    }
+  ],
+  "carts": [
+    {
+      "id": "113e",
+      "productName": "Samsung M40",
+      "productPrice": "50000",
+      "productCategory": "Mobile",
+      "productDescription": "Samsung product",
+      "productImage": "https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-m40-1.jpg",
+      "quantity": 1,
+      "productId": null,
+      "userId": "9633"
+    },
+    {
+      "id": "93bb",
+      "productName": "Boat Earbuds",
+      "productPrice": "1000",
+      "productCategory": "Electronics",
+      "productDescription": "Earbuds",
+      "productImage": "https://www.boat-lifestyle.com/cdn/shop/products/d6f427fc-0529-40e5-824b-cb849c1943ce_53eae3b9-6058-428c-aad1-f881e93dee87_288x.png?v=1629538280",
+      "quantity": 1,
+      "productId": "3867",
+      "userId": "9633"
+    }
+  ],
+  "orders": [
+    {
+      "id": "9617",
+      "email": "jo@gmail.com",
+      "address": "3A/B, Chennai, Tamil Nadu",
+      "contact": "098765",
+      "totalPrice": 1100,
+      "userId": "877d"
+    },
+    {
+      "id": "ae6d",
+      "email": "ranjani@gmail.com",
+      "address": "3A/B, Trichy, Tamilnadu",
+      "contact": "7654329753",
+      "totalPrice": 91798,
+      "userId": "a020"
+    },
+    {
+      "id": "a04f",
+      "email": "ranjani@gmail.com",
+      "address": "3A/B, Trichy, Tamilnadu",
+      "contact": "7654329753",
+      "totalPrice": 1799,
+      "userId": "a020"
+    }
+  ]
+}

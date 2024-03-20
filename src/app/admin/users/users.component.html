@@ -1,0 +1,23 @@
+<h2>Users</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Mobile Number</th>
+      <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.address}}</td>
+      <td>{{user.mobileNumber}}</td>
+      <td>Delete</td>
+      </tr>
+  </tbody>
+</table>
