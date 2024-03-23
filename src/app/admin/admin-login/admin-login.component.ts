@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
   styleUrl: './admin-login.component.css'
 })
 export class AdminLoginComponent {
-  loginObj: any = {
+    
+    loginObj: any = {
     username: '',
     password: ''
   };
@@ -19,7 +20,8 @@ export class AdminLoginComponent {
 
   OnLogin() {
     if (this.loginObj.username === 'admin' && this.loginObj.password === '334455') {
-      this.router.navigate(['/admin-dashboard']);
+      alert('Login Successful...!');
+      this.router.navigate(['/admin/users']);
     } else {
       alert('Wrong credentials');
     }

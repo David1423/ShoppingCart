@@ -2,7 +2,11 @@ export class Signup{
     username! : string;
     password! : string;
     email! : string;
-    address!: string;
+    houseno!: string;
+    area! : string;
+    city!: string;
+    state!: string;
+    pincode!:any;
     mobileNumber!: string;
     id: any;
 
@@ -46,7 +50,9 @@ export class priceSummary{
 
 export class Order{
     email!: string;
+    username!:string;
     address!: string;
+    pincode!:any;
     contact!: string;
     totalPrice!: number;
     userId!: string;

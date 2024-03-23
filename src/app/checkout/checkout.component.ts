@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../services/product.service';
-import { Cart, Order } from '../models/sellerlogin.model';
+import { Cart, Order } from '../models/object.model';
 import { Router } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CommonModule } from '@angular/common';
@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 })
 export class CheckoutComponent implements OnInit{
 
-  totalPrice:number|undefined;
+  amount:number|undefined;
   cartData:Cart[]|undefined;
   orderMessage:string|undefined;
 
@@ -32,19 +32,19 @@ export class CheckoutComponent implements OnInit{
           productPrice = productPrice+ (+item.productPrice* +item.quantity)
         }       
       })
-      this.totalPrice= productPrice+(productPrice/10)+100-(productPrice/10);
+      window.totalPrice= productPrice+(productPrice/10)+100-(productPrice/10);
 
-      console.warn(this.totalPrice);
+      console.warn(window.totalPrice);
     })
     
   }
-  orderNow(data:{email:string,address:string,contact:string}){
+  orderNow(data:{email:string,username:string,address:string,pincode:any,contact:string}){
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user).id;
-    if(this.totalPrice){
+    if(window.totalPrice){
       let orderData:Order = {
         ...data,
-        totalPrice: this.totalPrice,
+        totalPrice: window.totalPrice,
         userId,
         id:undefined
       }
@@ -59,7 +59,7 @@ export class CheckoutComponent implements OnInit{
           alert("Your order is placed...!")
           setTimeout(()=>{
             this.orderMessage=undefined;
-            this.router.navigate(['/my-orders']);
+            this.router.navigate(['/payment-gateway']);
           },1000)
         }
       })

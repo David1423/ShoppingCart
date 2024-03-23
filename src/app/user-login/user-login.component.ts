@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Cart, Login, Products, Signup } from '../models/sellerlogin.model';
+import { Cart, Login, Products, Signup } from '../models/object.model';
 import { UserService } from '../services/user.service';
 import { ProductService } from '../services/product.service';
 import { Router, RouterLink } from '@angular/router';

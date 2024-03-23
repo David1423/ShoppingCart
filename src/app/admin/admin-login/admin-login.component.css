@@ -59,7 +59,7 @@
 
 .form-control input {
     width: 100%;
-    max-width: 95%;
+    max-width: 100%;
     padding: 12px 0 12px 37px;
     border: 2px solid #00569f1c;
     background-color: rgb(232, 232, 232);

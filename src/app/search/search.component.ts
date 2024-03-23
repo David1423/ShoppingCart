@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProductService } from '../services/product.service';
-import { Products } from '../models/sellerlogin.model';
+import { Products } from '../models/object.model';
 import { CommonModule } from '@angular/common';
 
 
@@ -20,13 +20,6 @@ export class SearchComponent implements OnInit{
 
   }
 
-  // ngOnInit(): void {
-  //   let query = this. route.snapshot.paramMap.get('productName');
-  //   console.warn(query);
-  //   query && this.productService.searchProducts(query).subscribe((result)=>{
-  //     this.searchResult = result
-  //   })
-  // }
    ngOnInit(): void {
     let productName = this. route.snapshot.paramMap.get('productName');
     console.warn(productName);

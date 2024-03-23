@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
-import { Products } from '../models/sellerlogin.model';
+import { Products } from '../models/object.model';
 import { RouterLink } from '@angular/router';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule } from '@angular/common';

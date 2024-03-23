@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { Cart, Order, Products } from '../models/sellerlogin.model';
+import { Cart, Order, Products } from '../models/object.model';
 
 @Injectable({
   providedIn: 'root'

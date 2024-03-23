@@ -1,3 +1,16 @@
+<app-admin-header></app-admin-header>
+<div class="sidebar">
+  <a href="admin/users">Users</a>
+    <a href="admin/sellers">Sellers</a>
+    <a href="admin/products">Products</a>
+    <a href="admin/orders">Orders</a>
+</div>
+<!--Search content-->
+<div class="search">
+  <input class="search-bar" type="text" name="username"[(ngModel)]="username" (ngModelChange)="Search()" placeholder="Search By Sellers Name">
+</div>
+<!-- Page content -->
+<div class="content">
 <h2>Sellers</h2>
 <table class="table">
   <thead>
@@ -5,7 +18,7 @@
       <th>ID</th>
       <th>Name</th>
       <th>Email</th>
-      <th>Address</th>
+      <th>City</th>
       <th>Mobile Number</th>
       <th>Action</th>
       </tr>
@@ -15,9 +28,10 @@
       <td>{{seller.id}}</td>
       <td>{{seller.username}}</td>
       <td>{{seller.email}}</td>
-      <td>{{seller.address}}</td>
+      <td>{{seller.city}}</td>
       <td>{{seller.mobileNumber}}</td>
       <td>Delete</td>
       </tr>
   </tbody>
 </table>
+</div>

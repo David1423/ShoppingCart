@@ -19,6 +19,7 @@
 a{
     cursor: pointer;
 }
+
 .form-button:disabled {
     background-color: #ddd;
     cursor: default;
@@ -28,6 +29,10 @@ a{
     color: red;
     font-size: smaller;
     margin-top: 5px;
+    transform: translateY(-100%)
+  }
+  .error-message{
+    transform: translateY(-100%)
   }
   
   .auth-toggle-link {

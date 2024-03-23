@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../services/product.service';
-import { Products } from '../models/sellerlogin.model';
+import { Products } from '../models/object.model';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import{ faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +14,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './seller-home.component.css'
 })
 export class SellerHomeComponent implements OnInit {
+
   productList:undefined | Products[];
   productMessage:undefined|String;
   icon=faTrash;

@@ -11,7 +11,6 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
-import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { UsersComponent } from './admin/users/users.component';
 import { ProductsComponent } from './admin/products/products.component';
 import { AdminLoginComponent } from './admin/admin-login/admin-login.component';
@@ -22,11 +21,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { SellerSignupComponent } from './seller-signup/seller-signup.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { TrackingComponent } from './tracking/tracking.component';
+import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
-    // {path:'seller-signup', component:SellerSignupComponent},
-    // {path:'seller-login', component:SellerLoginComponent},
     {path:'seller-home', component:SellerHomeComponent, canActivate:[AuthGuard]},
     {path:'seller-addProduct', component:SellerAddProductComponent, canActivate:[AuthGuard]},
     {path:'seller-updateProduct/:id',component:SellerUpdateProductComponent, canActivate:[AuthGuard]},
@@ -37,6 +35,7 @@ export const routes: Routes = [
     {path:'my-orders', component:MyOrdersComponent},
     {path:'about', component:AboutComponent},
     {path:'contact-us', component:ContactUsComponent},
+    {path:'payment-gateway',component:PaymentGatewayComponent},
     {path:'tracking', component:TrackingComponent},
     {path:'', children:[
         {path:'seller-signup', component:SellerSignupComponent},
@@ -52,7 +51,6 @@ export const routes: Routes = [
         {path:'admin-login', component:AdminLoginComponent}
     ]},
     {path:'', children:[
-        {path:'admin-dashboard', component:AdminDashboardComponent},
         {path:'admin/users', component:UsersComponent},
         {path:'admin/products', component:ProductsComponent},
         {path:'admin/sellers', component:SellersComponent},

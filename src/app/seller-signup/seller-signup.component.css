@@ -27,7 +27,12 @@ a{
   .error {
     color: red;
     font-size: smaller;
-    margin-top: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    transform: translateY(-100%)
+  }
+  .error-message{
+    transform: translateY(-100%)
   }
   
   .auth-toggle-link {

@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Login, Signup } from '../models/sellerlogin.model';
+import { Login, Signup } from '../models/object.model';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
