@@ -12,13 +12,17 @@
 <!-- Page content -->
 <div class="content">
   <h2>Users</h2>
+  <p class="message-p">{{userMessage}}</p>
   <table class="table">
     <thead>
       <tr>
         <th>ID</th>
+        <th>UserID</th>
         <th>Name</th>
         <th>Email</th>
         <th>City</th>
+        <th>State</th>
+        <th>Pincode</th>
         <th>Mobile Number</th>
         <th>Action</th>
       </tr>
@@ -26,11 +30,19 @@
     <tbody>
       <tr *ngFor="let user of users">
         <td>{{user.id}}</td>
+        <td>{{user.userId}}</td>
         <td>{{user.username}}</td>
         <td>{{user.email}}</td>
         <td>{{user.city}}</td>
+        <td>{{user.state}}</td>
+        <td>{{user.pincode}}</td>
         <td>{{user.mobileNumber}}</td>
-        <td>Delete</td>
+        <td>
+            
+          <a class="adjust-update-link" routerLink="/admin/users-update/{{user.id}}"> <fa-icon  [icon]="iconEdit"></fa-icon></a>  
+          <a class="adjust-delete-link"> <fa-icon (click)="deleteUsers(user.id)" [icon]="icon"></fa-icon></a>
+         
+        </td>
       </tr>
     </tbody>
   </table>

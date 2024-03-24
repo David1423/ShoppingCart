@@ -12,6 +12,7 @@ import { Products } from '../models/object.model';
   styleUrl: './seller-update-product.component.css'
 })
 export class SellerUpdateProductComponent implements OnInit {
+  
   productData : undefined | Products;
   productMessage : undefined | string;
 

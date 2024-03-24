@@ -12,9 +12,11 @@
 <!-- Page content -->
 <div class="content">
   <h2>Products</h2>
+  <p>{{productMessage}}</p>
   <table class="table">
     <thead>
       <tr>
+        <th>ID</th>
         <th>Product ID</th>
         <th>Product Name</th>
         <th>Product Price</th>
@@ -24,10 +26,15 @@
     <tbody>
       <tr *ngFor="let product of products">
         <td>{{product.id}}</td>
+        <td>{{product.productId}}</td>
         <td>{{product.productName}}</td>
         <td>{{product.productPrice}}</td>
-        <td>Edit</td>
-        <td>Delete</td>
+        <td>
+            
+          <a class="adjust-update-link" routerLink="/admin/products-update/{{product.id}}"> <fa-icon  [icon]="iconEdit"></fa-icon></a>  
+          <a class="adjust-delete-link"> <fa-icon (click)="deleteProduct(product.id)" [icon]="icon"></fa-icon></a>
+         
+        </td>
       </tr>
     </tbody>
   </table>

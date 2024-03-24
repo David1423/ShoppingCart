@@ -20,3 +20,7 @@
     padding: 7px;
     width: 40px;
 }
+.form-button{
+    justify-content:space-between;
+    margin: 1px;
+}

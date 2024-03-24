@@ -1,80 +1,75 @@
 {
   "seller": [
     {
-      "id": "5bcc",
+      "sellerId": "1",
+      "username": "Jothi",
+      "email": "jothi@gmail.com",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600017",
+      "mobileNumber": "8790475675",
+      "id": "86d6"
+    },
+    {
+      "sellerId": "2",
+      "username": "Sabitha",
+      "email": "sabitha@gmail.com",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600017",
+      "mobileNumber": "8790475876",
+      "id": "2e06"
+    },
+    {
+      "id": "ec0c",
       "username": "Ranjani",
       "password": "Ranju@12",
       "email": "ranjani@gmail.com",
-      "address": "3A/B, Trichy, Tamilnadu",
-      "mobileNumber": "7654329753"
+      "houseno": "3a/c,",
+      "area": "Sivagi street",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600017",
+      "mobileNumber": "7654567899"
     }
   ],
   "products": [
     {
-      "productName": "Boat Earbuds",
-      "productPrice": "1699",
+      "id": "7eb2",
+      "productName": "Bluetooth neck band",
+      "productPrice": 1499,
       "productCategory": "Electronics",
-      "productDescription": "Earbuds",
-      "productImage": "https://www.boat-lifestyle.com/cdn/shop/products/d6f427fc-0529-40e5-824b-cb849c1943ce_53eae3b9-6058-428c-aad1-f881e93dee87_288x.png?v=1629538280",
-      "id": "3867"
+      "productDescription": "Bluetooth neck band",
+      "productImage": "https://storage.googleapis.com/shy-pub/34186/1629541896483_neckband.png"
     },
     {
-      "productName": "Mixer Grinder",
-      "productPrice": "7999",
-      "productCategory": "Home appliances",
-      "productDescription": "preethi grinder",
-      "productImage": "https://nandilathgmart.com/wp-content/uploads/2020/07/zodiac-47d.png",
-      "id": "2b31"
-    },
-    {
-      "productName": "Iphone 15",
-      "productPrice": "89999",
-      "productCategory": "mobile",
-      "productDescription": "Get to know iPhone 15. USB-C. iOS 17.",
-      "productImage": "https://img.freepik.com/premium-psd/realistic-iphone-14-pro-max-3d-smartphone-screen-mockup-template-with-editable-background-psd_349001-545.jpg",
-      "id": "6d26"
-    },
-    {
-      "productName": "Iphone 15 pro",
-      "productPrice": "99999",
-      "productCategory": "mobile",
-      "productDescription": "Get to know iPhone 15 Pro. iOS 17. A17 Pro chip.",
-      "productImage": "https://atlas-content-cdn.pixelsquid.com/assets_v2/324/3240251740192248889/jpeg-600/G03.jpg?modifiedAt=1",
-      "id": "6f4f"
-    },
-    {
-      "id": "5768",
-      "productName": "Red Soft Toy Teddy",
-      "productPrice": 499,
-      "productCategory": "Toys",
-      "productDescription": "Teddy bear is made with high-quality soft material",
-      "productImage": "https://miniwhale.in/wp-content/uploads/2023/01/1-22.png"
-    },
-    {
-      "productName": "Intex 32 inch LED TV",
-      "productPrice": "11999",
-      "productCategory": "Home appliances",
-      "productDescription": "Intex 32 inch HD Smart Android 9.0 LED TV",
-      "productImage": "https://www.intex.in/cdn/shop/products/3263.jpg?v=1648711134",
-      "id": "ae57"
+      "id": "0107",
+      "productName": "Iphone 14",
+      "productPrice": 69999,
+      "productDescription": "iphone 14",
+      "productImage": "https://atlas-content-cdn.pixelsquid.com/assets_v2/296/2962610729624016433/jpeg-600/G03.jpg?modifiedAt=1"
     }
   ],
   "users": [
     {
-      "id": "a020",
+      "userId": "2",
       "username": "Ranjani",
-      "password": "Ranju@12",
       "email": "ranjani@gmail.com",
-      "address": "3A/B, Trichy, Tamilnadu",
-      "mobileNumber": "7654329753"
+      "city": "Trichy",
+      "state": "Tamil Nadu",
+      "pincode": "621207",
+      "mobileNumber": "6365789541",
+      "id": "3ded"
     },
     {
-      "id": "62b6",
-      "username": "Keerthana",
-      "password": "Keerthu@12",
-      "email": "keerthana@gmail.com",
-      "address": "3A/B, Trichy, Tamilnadu",
-      "mobileNumber": "7654329753"
+      "userId": "5",
+      "username": "Jothi",
+      "email": "jothi@gmail.com",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600017",
+      "mobileNumber": "9790475675",
+      "id": "6fdd"
     }
   ],
   "carts": [
@@ -97,98 +92,52 @@
       "productDescription": "Earbuds",
       "productImage": "https://www.boat-lifestyle.com/cdn/shop/products/d6f427fc-0529-40e5-824b-cb849c1943ce_53eae3b9-6058-428c-aad1-f881e93dee87_288x.png?v=1629538280",
       "quantity": 1,
-      "productId": "3867",
+      "productId": null,
       "userId": "9633"
+    },
+    {
+      "id": "2349",
+      "productName": "Iphone 15",
+      "productPrice": "89999",
+      "productCategory": "mobile",
+      "productDescription": "Get to know iPhone 15. USB-C. iOS 17.",
+      "productImage": "https://img.freepik.com/premium-psd/realistic-iphone-14-pro-max-3d-smartphone-screen-mockup-template-with-editable-background-psd_349001-545.jpg",
+      "quantity": 1,
+      "productId": null,
+      "userId": null
     }
   ],
   "orders": [
     {
-      "id": "9617",
+      "userId": "877d",
+      "username": "Jothi",
       "email": "jo@gmail.com",
       "address": "3A/B, Chennai, Tamil Nadu",
-      "contact": "098765",
-      "totalPrice": 1100,
-      "userId": "877d"
+      "contact": "9876545678",
+      "totalPrice": "1100",
+      "id": "9617"
     },
     {
-      "id": "a9b9",
+      "userId": "4d5f",
+      "username": "Ranjani",
+      "email": "ranjani@gmail.com",
+      "address": "3A/B, Trichy, Tamilnadu",
+      "contact": "7654329753",
+      "totalPrice": "8099",
+      "id": "bb8a"
+    },
+    {
+      "id": "8ed8",
       "email": "ranjani@gmail.com",
       "username": "Ranjani",
       "address": "3A/B, Trichy, Tamilnadu",
       "pincode": "621207",
       "contact": "7654329753",
       "totalPrice": 90099,
-      "userId": "a020"
-    },
-    {
-      "id": "e683",
-      "email": "ranjani@gmail.com",
-      "username": "Ranjani",
-      "address": "3A/B, Trichy, Tamilnadu",
-      "pincode": "621207",
-      "contact": "7654329753",
-      "totalPrice": 1799,
-      "userId": "a020"
-    },
-    {
-      "id": "bb8a",
-      "email": "ranjani@gmail.com",
-      "username": "Ranjani",
-      "address": "3A/B, Trichy, Tamilnadu",
-      "pincode": "621207",
-      "contact": "7654329753",
-      "totalPrice": 8099,
-      "userId": "a020"
-    },
-    {
-      "id": "f976",
-      "email": "ranjani@gmail.com",
-      "username": "Ranjani",
-      "address": "3A/B, Trichy, Tamilnadu",
-      "pincode": "621207",
-      "contact": "7654329753",
-      "totalPrice": 90099,
-      "userId": "a020"
-    },
-    {
-      "id": "f645",
-      "email": "",
-      "username": "",
-      "address": "",
-      "pincode": "",
-      "contact": "",
-      "totalPrice": 8099,
-      "userId": "a020"
-    },
-    {
-      "id": "cb7e",
-      "email": "",
-      "username": "",
-      "address": "",
-      "pincode": "",
-      "contact": "",
-      "totalPrice": 8099,
-      "userId": "a020"
-    },
-    {
-      "id": "1193",
-      "email": "",
-      "username": "",
-      "address": "",
-      "pincode": "",
-      "contact": "",
-      "totalPrice": 8099,
-      "userId": "a020"
-    },
-    {
-      "id": "40ed",
-      "email": "ranjani@gmail.com",
-      "username": "Ranjani",
-      "address": "3A/B, Trichy, Tamilnadu",
-      "pincode": "621207",
-      "contact": "7654329753",
-      "totalPrice": 100099,
-      "userId": "a020"
+      "userId": "3ded"
     }
+  ],
+  "shippers":[
+    
   ]
 }

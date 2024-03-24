@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit{
   menuType :string='default';
   sellerName: string="";
   userName: string="";
+  shipperName: string="";
   searchResult: undefined|Products[];
   iconCart=faShoppingCart;
   cartItems=0;
@@ -41,6 +42,12 @@ export class HeaderComponent implements OnInit{
           this.userName = userData.username;
           this.menuType = 'user';
           this.productService.getCartList(userData.id);
+        }
+        else if(localStorage.getItem('shipper')){
+          let shipperStore = localStorage.getItem('shipper');
+          let shipperData = shipperStore && JSON.parse(shipperStore);
+          this.shipperName = shipperData.username;
+          this.menuType = 'shipper';
         }
         else{
           this.menuType = 'default'

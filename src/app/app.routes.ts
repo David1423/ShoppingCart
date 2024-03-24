@@ -22,6 +22,12 @@ import { SellerSignupComponent } from './seller-signup/seller-signup.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { TrackingComponent } from './tracking/tracking.component';
 import { PaymentGatewayComponent } from './payment-gateway/payment-gateway.component';
+import { UsersUpdateComponent } from './admin/users-update/users-update.component';
+import { ProductsUpdateComponent } from './admin/products-update/products-update.component';
+import { OrdersUpdateComponent } from './admin/orders-update/orders-update.component';
+import { SellersUpdateComponent } from './admin/sellers-update/sellers-update.component';
+import { ShipperSignupComponent } from './shipper-signup/shipper-signup.component';
+import { ShipperLoginComponent } from './shipper-login/shipper-login.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -45,7 +51,10 @@ export const routes: Routes = [
         {path:'user-signup', component:UserSignupComponent},
         {path:'user-login', component:UserLoginComponent},
     ]},
-
+    {path:'', children:[
+        {path:'shipper-signup', component:ShipperSignupComponent},
+        {path:'shipper-login', component:ShipperLoginComponent},
+    ]},
 
     {path:'', children:[
         {path:'admin-login', component:AdminLoginComponent}
@@ -54,7 +63,10 @@ export const routes: Routes = [
         {path:'admin/users', component:UsersComponent},
         {path:'admin/products', component:ProductsComponent},
         {path:'admin/sellers', component:SellersComponent},
-        {path:'admin/orders', component:OrdersComponent}
-    ]}
-    
+        {path:'admin/orders', component:OrdersComponent},
+        {path:'admin/users-update/:id', component:UsersUpdateComponent},
+        {path:'admin/sellers-update/:id', component:SellersUpdateComponent},
+        {path:'admin/products-update/:id', component:ProductsUpdateComponent},
+        {path:'admin/orders-update/:id', component:OrdersUpdateComponent}
+    ]}  
 ];

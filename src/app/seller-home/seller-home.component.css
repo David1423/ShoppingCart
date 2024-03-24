@@ -20,6 +20,12 @@ table td , table th{
 .adjust-update-link{
     margin-left: 10px;
     margin-right: 15px;
-    color: black;
+    color: blue;
+    cursor: pointer;
+}
+.adjust-delete-link{
+    margin-left: 10px;
+    margin-right: 15px;
+    color: red;
     cursor: pointer;
 }

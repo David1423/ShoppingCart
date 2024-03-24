@@ -12,25 +12,35 @@
 <!-- Page content -->
 <div class="content">
 <h2>Orders</h2>
+<p>{{orderMessage}}</p>
   <table class="table">
   <thead>
     <tr>
-      <th>Order ID</th>
-      <th>UserId</th>
+      <th>OrderID</th>
+      <th>UserID</th>
+      <th>Username</th>
       <th>Email</th>
       <th>Address</th>
       <th>Contact</th>
       <th>Total Price</th>
+      <th>Action</th>
       </tr>
   </thead>
   <tbody>
     <tr *ngFor="let order of orders">
       <td>{{order.id}}</td>
       <td>{{order.userId}}</td>
+      <td>{{order.username}}</td>
       <td>{{order.email}}</td>
       <td>{{order.address}}</td>
       <td>{{order.contact}}</td>
       <td>{{order.totalPrice}}</td>
+      <td>
+            
+        <a class="adjust-update-link" routerLink="/admin/orders-update/{{order.id}}"> <fa-icon  [icon]="iconEdit"></fa-icon></a>  
+        <a class="adjust-delete-link"> <fa-icon (click)="deleteOrder(order.id)" [icon]="icon"></fa-icon></a>
+       
+      </td>
     </tr>
   </tbody>
 </table>

@@ -9,7 +9,8 @@ export class Signup{
     pincode!:any;
     mobileNumber!: string;
     id: any;
-
+    userId!: number;
+    sellerId!: number;
 }
 
 export class Login{
@@ -20,7 +21,7 @@ export class Login{
 export class Products{
     productName!:string;
     productPrice!:number;
-    productCategory!:string;
+    // productCategory!:string;
     productDescription!:string;
     productImage!:string;
     id!:number;
@@ -30,7 +31,7 @@ export class Products{
 export class Cart{
     productName!:string;
     productPrice!:number;
-    productCategory!:string;
+    // productCategory!:string;
     productDescription!:string;
     productImage!:string;
     id:number | undefined;

@@ -8,6 +8,12 @@
     height: 100%;
     overflow: auto;
   }
+  .table{
+    margin: 10px;
+    justify-content: space-between;
+    padding-left: 40px;
+    align-items: center;
+  }
   
   /* Sidebar links */
   .sidebar a {
@@ -32,7 +38,7 @@
   /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
   div.content {
     margin-left: 200px;
-    padding: 1px 16px;
+    padding: 1px 10px;
     height: 1000px;
   }
   /* search bar*/
@@ -65,4 +71,16 @@
       text-align: center;
       float: none;
     }
+  }
+  .adjust-update-link{
+    margin-left: 10px;
+    margin-right: 15px;
+    color: blue;
+    cursor: pointer;
+  }
+  .adjust-delete-link{
+    margin-left: 10px;
+    margin-right: 15px;
+    color: red;
+    cursor: pointer;
   }

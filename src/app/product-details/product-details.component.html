@@ -6,7 +6,7 @@
         <div class="details">
             <h3>{{productData.productName}}</h3>
             <h4>Price: {{productData.productPrice}}</h4>
-                <h6>Category: {{productData.productCategory}}</h6>
+                <!-- <h6>Category: {{productData.productCategory}}</h6> -->
                 <h6>Description: {{productData.productDescription}}</h6>
                 <button class="form-button" routerLink="/cart-page" (click)="buyNow()">Buy Now</button>
                 <button *ngIf="removeCart" class="form-button" (click)="removeToCart(productData.id)">Remove from Cart</button>

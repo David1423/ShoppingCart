@@ -54,8 +54,8 @@ export class UserLoginComponent implements OnInit {
       cartDataList.forEach((products:Products,index)=>{
         let cartData:Cart={
           ...products,
-          productId:products.id,
-          userId
+          productId: products.id,
+          userId,
         }
         delete cartData.id
         setTimeout(()=>{

@@ -12,10 +12,10 @@
             <span *ngIf="productForm.controls['productPrice'].errors?.['required']" class="error">Product Price is required.</span>
         </div>
     
-        <input type="text" class="form-input" placeholder="Enter Product Category" name="productCategory" ngModel required />
+        <!-- <input type="text" class="form-input" placeholder="Enter Product Category" name="productCategory" ngModel required />
         <div *ngIf="productForm.controls['productCategory'].invalid && (productForm.controls['productCategory'].dirty || productForm.controls['productCategory'].touched)" class="error-message">
             <span *ngIf="productForm.controls['productCategory'].errors?.['required']" class="error">Product Category is required.</span>
-        </div>
+        </div> -->
     
         <textarea class="form-input" placeholder="Enter Product Description" name="productDescription" ngModel required></textarea>
         <div *ngIf="productForm.controls['productDescription'].invalid && (productForm.controls['productDescription'].dirty || productForm.controls['productDescription'].touched)" class="error-message">

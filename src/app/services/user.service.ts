@@ -11,7 +11,6 @@ export class UserService {
   invalidUser = new EventEmitter<boolean>(false);
   isLoginError= new EventEmitter<boolean>(false);
   
-
   constructor(private http : HttpClient, private router : Router) { }
 
   userSignUp(user:Signup){

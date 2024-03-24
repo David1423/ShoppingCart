@@ -1,6 +1,6 @@
 <nav class="nav">
     <h1><a routerLink=" "></a>Shopping Cart</h1>
-    <div *ngIf="menuType!=='seller'" class="search">
+    <div *ngIf="menuType!=='seller'||'shipper'" class="search">
         <input type="text" 
         #searchInput
         (keyup)="searchProducts($event)" (blur)="hideSearch()" placeholder="Search Products">
@@ -13,16 +13,17 @@
     </div>
     <div [ngSwitch]="menuType">
     <ul *ngSwitchCase="'default'">
-        <li><a routerLink="seller-login">Seller</a></li>
+        <li><a routerLink="seller-signup">Seller</a></li>
+        <li><a routerLink="shipper-signup">Shipper</a></li>
         <li><a href="">Home</a></li>
-        <li><a routerLink="user-login">Login</a></li>
+        <li><a routerLink="user-signup">Login</a></li>
         <li><a routerLink="about">About</a></li>
         <li><a routerLink="contact-us">Contact Us</a></li>
         <li class="badge" value={{cartItems}}><a routerLink="user-login"><fa-icon [icon]="iconCart"></fa-icon></a></li>
        
     </ul>
     <ul *ngSwitchCase="'user'">
-        <li><a routerLink="seller-login">Seller</a></li>
+        <li><a routerLink="seller-signup">Seller</a></li>
         <li><a href="">Home</a></li>
         <li><a >{{userName | titlecase}}</a></li>
         <li><a routerLink="my-orders">My Orders</a></li>
@@ -32,8 +33,12 @@
     <ul *ngSwitchCase="'seller'">
         <li><a routerLink="seller-addProduct">Add Product</a></li>
         <li><a routerLink="seller-home">List</a></li>
+        <li><a >{{sellerName | titlecase}}</a></li>
         <li><a (click)="logOut()">LogOut</a></li>
-        <li><a href="#">{{sellerName | titlecase}}</a></li>
+    </ul>
+    <ul *ngSwitchCase="'shipper'">
+        <li><a >{{shipperName | titlecase}}</a></li>
+        <li><a (click)="logOut()">LogOut</a></li>
     </ul>
    </div>
 </nav>

@@ -8,6 +8,12 @@
     height: 100%;
     overflow: auto;
   }
+  .table{
+    margin: 10px;
+    justify-content: space-between;
+    padding-left: 40px;
+    align-items: center;
+  }
   
   /* Sidebar links */
   .sidebar a {
@@ -65,3 +71,15 @@
       float: none;
     }
   }
+  .adjust-update-link{
+    margin-left: 10px;
+    margin-right: 15px;
+    color: blue;
+    cursor: pointer;
+}
+.adjust-delete-link{
+    margin-left: 10px;
+    margin-right: 15px;
+    color: red;
+    cursor: pointer;
+}

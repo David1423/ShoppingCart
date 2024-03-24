@@ -12,10 +12,9 @@ export class AdminService {
   user_url:string = 'http://localhost:3000/users/';
   seller_url:string = 'http://localhost:3000/seller/';
   product_url:string = "http://localhost:3000/products/";
-  order_url:string = "http://localhost:3000/orders"
+  order_url:string = 'http://localhost:3000/orders';
   
   constructor(private http:HttpClient) { }
-
 
   getUsers(){
     return this.http.get<Signup[]>(this.user_url);
@@ -31,6 +30,54 @@ export class AdminService {
 
   getOrders(){
     return this.http.get<Order[]>(this.order_url);
+  }
+  deleteUsers(id:number){
+    return this.http.delete(`http://localhost:3000/users/${id}`);
+  }
+  usersList(){
+    return this.http.get<Signup[]>('http://localhost:3000/users');
+  }
+  getUser(id:string){
+    return this.http.get<Signup>(`http://localhost:3000/users/${id}`);
+  }
+  updateUsers(user : Signup){
+    return this.http.put<Signup>(`http://localhost:3000/users/${user.id}`,user)
+  }
+  deleteSellers(id:number){
+    return this.http.delete(`http://localhost:3000/seller/${id}`);
+  }
+  sellersList(){
+    return this.http.get<Signup[]>('http://localhost:3000/seller');
+  }
+  getSeller(id:string){
+    return this.http.get<Signup>(`http://localhost:3000/seller/${id}`);
+  }
+  updateSellers(seller : Signup){
+    return this.http.put<Signup>(`http://localhost:3000/seller/${seller.id}`,seller)
+  }
+  deleteProducts(id:number){
+    return this.http.delete(`http://localhost:3000/products/${id}`);
+  }
+  productsList(){
+    return this.http.get<Products[]>('http://localhost:3000/products');
+  }
+  getProduct(id:string){
+    return this.http.get<Products>(`http://localhost:3000/products/${id}`);
+  }
+  updateProducts(product : Products){
+    return this.http.put<Products>(`http://localhost:3000/products/${product.id}`,product)
+  }
+  deleteOrders(id:number){
+    return this.http.delete(`http://localhost:3000/orders/${id}`);
+  }
+  ordersList(){
+    return this.http.get<Order[]>('http://localhost:3000/orders');
+  }
+  getOrder(id:string){
+    return this.http.get<Order>(`http://localhost:3000/orders/${id}`);
+  }
+  updateOrders(order : Order){
+    return this.http.put<Order>(`http://localhost:3000/orders/${order.id}`,order)
   }
 
 }

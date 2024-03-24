@@ -7,7 +7,7 @@
           <th>Image</th>
           <th>Name</th>
           <th>Price</th>
-          <th>Category</th>
+          <!-- <th>Category</th> -->
           <th>Description</th>
           <th>Action</th>
         </tr>
@@ -17,12 +17,12 @@
           <td><img src="{{ item.productImage }}" /></td>
           <td>{{ item.productName }}</td>
           <td>{{ item.productPrice }}</td>
-          <td>{{ item.productCategory }}</td>
+          <!-- <td>{{ item.productCategory }}</td> -->
           <td>{{ item.productDescription }}</td>
           <td>
             
             <a class="adjust-update-link" routerLink="/seller-updateProduct/{{item.id}}"> <fa-icon  [icon]="iconEdit"></fa-icon></a>  
-            <a class="adjust-update-link"> <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon></a>
+            <a class="adjust-delete-link"> <fa-icon (click)="deleteProduct(item.id)" [icon]="icon"></fa-icon></a>
            
           </td>
         </tr>
