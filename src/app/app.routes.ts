@@ -28,6 +28,7 @@ import { OrdersUpdateComponent } from './admin/orders-update/orders-update.compo
 import { SellersUpdateComponent } from './admin/sellers-update/sellers-update.component';
 import { ShipperSignupComponent } from './shipper-signup/shipper-signup.component';
 import { ShipperLoginComponent } from './shipper-login/shipper-login.component';
+import { ShipperHomeComponent } from './shipper-home/shipper-home.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -55,7 +56,7 @@ export const routes: Routes = [
         {path:'shipper-signup', component:ShipperSignupComponent},
         {path:'shipper-login', component:ShipperLoginComponent},
     ]},
-
+    {path:'shipper-home', component:ShipperHomeComponent},
     {path:'', children:[
         {path:'admin-login', component:AdminLoginComponent}
     ]},

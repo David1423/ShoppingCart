@@ -137,7 +137,30 @@
       "userId": "3ded"
     }
   ],
-  "shippers":[
-    
+  "shippers": [
+    {
+      "id": "967e",
+      "username": "Jothi",
+      "password": "Jothi@123",
+      "email": "jothi@gmail.com",
+      "houseno": "3a/c,",
+      "area": "Sivagi street",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600017",
+      "mobileNumber": "8790475675"
+    },
+    {
+      "id": "a32d",
+      "username": "Surya",
+      "password": "Surya@123",
+      "email": "surya@gmail.com",
+      "houseno": "3a/c,",
+      "area": "Sivagi street",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600017",
+      "mobileNumber": "6376895322"
+    }
   ]
 }

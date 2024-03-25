@@ -43,12 +43,6 @@ export class HeaderComponent implements OnInit{
           this.menuType = 'user';
           this.productService.getCartList(userData.id);
         }
-        else if(localStorage.getItem('shipper')){
-          let shipperStore = localStorage.getItem('shipper');
-          let shipperData = shipperStore && JSON.parse(shipperStore);
-          this.shipperName = shipperData.username;
-          this.menuType = 'shipper';
-        }
         else{
           this.menuType = 'default'
         }

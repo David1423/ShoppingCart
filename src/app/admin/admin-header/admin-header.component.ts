@@ -21,7 +21,7 @@ export class AdminHeaderComponent implements OnInit {
   }
 
   logOut() {
-    localStorage.removeItem('seller')
+    localStorage.removeItem('admin')
     this.router.navigate(['admin-login'])
   }
 }

@@ -1,1 +1,70 @@
-<p>shipper-signup works!</p>
+<div class="seller-login">
+    <div class="sign-up">
+      <h2>Shipper Sign-up</h2>
+      <form [formGroup]="shipperForm" (ngSubmit)="signUp(shipperForm.value)" class="common-form">
+        <div>
+          <input type="text" class="form-input" placeholder="Enter Name" name="username" formControlName="username" pattern="^[a-zA-Z ]+$" required minlength="4" />
+          <div *ngIf="shipperForm.controls['username'].invalid && (shipperForm.controls['username'].dirty || shipperForm.controls['username'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['username'].errors?.['required']" class="error">Username is required.</span>
+            <span *ngIf="shipperForm.get('username')?.hasError('minlength')" class="error">Username must be at least 4 characters long.</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="form-input" placeholder="Enter Email" name="email" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required email />
+          <div *ngIf="shipperForm.controls['email'].invalid && (shipperForm.controls['email'].dirty || shipperForm.controls['email'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['email'].errors?.['required']" class="error">Email is required.</span>
+            <span *ngIf="shipperForm.controls['email'].errors?.['email']" class="error">Invalid email format.</span>
+          </div>
+        </div>
+        <div>
+          <input type="password" class="form-input" placeholder="Enter Password" name="password" formControlName="password" pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%\^&\*\(\)\-+=])(?=\S+).{8,20}$" required minlength="6" />
+          <div *ngIf="shipperForm.controls['password'].invalid && (shipperForm.controls['password'].dirty || shipperForm.controls['password'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['password'].errors?.['required']" class="error">Password is required.</span>
+            <span *ngIf="shipperForm.get('password')?.hasError('minlength')" class="error">Password must be 6 characters long.</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="form-input" placeholder="Enter House no." name="houseno" formControlName="houseno" required />
+          <div *ngIf="shipperForm.controls['houseno'].invalid && (shipperForm.controls['houseno'].dirty || shipperForm.controls['houseno'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['houseno'].errors?.['required']" class="error">House No. is required.</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="form-input" placeholder="Enter Area or Street" name="area" formControlName="area" required />
+          <div *ngIf="shipperForm.controls['area'].invalid && (shipperForm.controls['area'].dirty || shipperForm.controls['area'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['area'].errors?.['required']" class="error">Area or Street is required.</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="form-input" placeholder="Enter City" name="city" formControlName="city" required />
+          <div *ngIf="shipperForm.controls['city'].invalid && (shipperForm.controls['city'].dirty || shipperForm.controls['city'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['city'].errors?.['required']" class="error">City is required.</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="form-input" placeholder="Enter State" name="state" formControlName="state" required />
+          <div *ngIf="shipperForm.controls['state'].invalid && (shipperForm.controls['state'].dirty || shipperForm.controls['state'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['state'].errors?.['required']" class="error">State is required.</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="form-input" placeholder="Enter Pincode" name="pincode" formControlName="pincode" required />
+          <div *ngIf="shipperForm.controls['pincode'].invalid && (shipperForm.controls['pincode'].dirty || shipperForm.controls['pincode'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['pincode'].errors?.['required']" class="error">Pincode is required.</span>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="form-input" placeholder="Enter Mobile Number" name="mobileNumber" formControlName="mobileNumber" pattern="[0-9]{10}" required  />
+          <div *ngIf="shipperForm.controls['mobileNumber'].invalid && (shipperForm.controls['mobileNumber'].dirty || shipperForm.controls['mobileNumber'].touched)" class="error-message">
+            <span *ngIf="shipperForm.controls['mobileNumber'].errors?.['required']" class="error">Mobile Number is required.</span>
+          </div>
+        </div>
+        <input type="text" class="form-input" name="role" value="SELLER" disabled="true"/>
+  
+        <button class="form-button" [disabled]="shipperForm.invalid">Sign Up</button>
+        <p>Already have account? <a class="auth-toggle-link" (click)="openLogin()">Click for Login</a></p>
+      </form>
+    </div>
+  </div>
+  
+  

@@ -1,6 +1,6 @@
 <nav class="nav">
     <h1><a routerLink=" "></a>Shopping Cart</h1>
-    <div *ngIf="menuType!=='seller'||'shipper'" class="search">
+    <div *ngIf="menuType!=='seller'" class="search">
         <input type="text" 
         #searchInput
         (keyup)="searchProducts($event)" (blur)="hideSearch()" placeholder="Search Products">
@@ -31,6 +31,11 @@
         <li class="badge" value={{cartItems}}><a [routerLink]="cartItems>0?'cart-page':null" class="icon"><fa-icon [icon]="iconCart"></fa-icon></a></li>
     </ul>
     <ul *ngSwitchCase="'seller'">
+        <li><a routerLink="seller-addProduct">Add Product</a></li>
+        <li><a routerLink="seller-home">List</a></li>
+        <li><a >{{sellerName | titlecase}}</a></li>
+        <li><a (click)="logOut()">LogOut</a></li>
+    </ul> <ul *ngSwitchCase="'seller'">
         <li><a routerLink="seller-addProduct">Add Product</a></li>
         <li><a routerLink="seller-home">List</a></li>
         <li><a >{{sellerName | titlecase}}</a></li>
