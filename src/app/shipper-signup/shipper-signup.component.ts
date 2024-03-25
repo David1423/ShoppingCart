@@ -21,7 +21,7 @@ export class ShipperSignupComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.shipperService.reloadSeller();
+    this.shipperService.reloadShipper();
 
     this.shipperForm = this.formBuilder.group({
       username: ['', [Validators.required, Validators.minLength(4)]],
@@ -41,6 +41,6 @@ export class ShipperSignupComponent implements OnInit {
   }
 
   openLogin() {
-    this.router.navigate(['shipper-login'])
+    this.router.navigate(['shipper-login']);
   }
 }

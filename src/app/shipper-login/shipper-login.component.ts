@@ -22,7 +22,7 @@ export class ShipperLoginComponent implements OnInit{
   }
 
   ngOnInit(): void {
-   this.shipperService.reloadSeller();
+   this.shipperService.reloadShipper();
 
    this.shipperForm = this.formBuilder.group({
     password: ['', [Validators.required, Validators.minLength(6)]],
@@ -42,7 +42,7 @@ export class ShipperLoginComponent implements OnInit{
   }
 
   openSignup(){
-    this.router.navigate(['shipper-signup'])
+    this.router.navigate(['shipper-signup']);
   }
 
 }

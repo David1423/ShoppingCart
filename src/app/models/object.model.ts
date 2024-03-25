@@ -11,6 +11,7 @@ export class Signup{
     id: any;
     userId!: number;
     sellerId!: number;
+    shipperId!:number;
 }
 
 export class Login{

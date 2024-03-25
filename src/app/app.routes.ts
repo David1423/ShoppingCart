@@ -29,6 +29,8 @@ import { SellersUpdateComponent } from './admin/sellers-update/sellers-update.co
 import { ShipperSignupComponent } from './shipper-signup/shipper-signup.component';
 import { ShipperLoginComponent } from './shipper-login/shipper-login.component';
 import { ShipperHomeComponent } from './shipper-home/shipper-home.component';
+import { ShippersComponent } from './admin/shippers/shippers.component';
+import { ShippersUpdateComponent } from './admin/shippers-update/shippers-update.component';
 
 export const routes: Routes = [
     {path:'', component:HomeComponent},
@@ -65,9 +67,11 @@ export const routes: Routes = [
         {path:'admin/products', component:ProductsComponent},
         {path:'admin/sellers', component:SellersComponent},
         {path:'admin/orders', component:OrdersComponent},
+        {path:'admin/shippers', component:ShippersComponent},
         {path:'admin/users-update/:id', component:UsersUpdateComponent},
         {path:'admin/sellers-update/:id', component:SellersUpdateComponent},
         {path:'admin/products-update/:id', component:ProductsUpdateComponent},
-        {path:'admin/orders-update/:id', component:OrdersUpdateComponent}
+        {path:'admin/orders-update/:id', component:OrdersUpdateComponent},
+        {path:'admin/shippers-update/:id', component:ShippersUpdateComponent}
     ]}  
 ];

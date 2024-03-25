@@ -21,17 +21,17 @@ export class ShipperService {
     {observe:'response'}).subscribe((result)=>{
       console.warn(result)
       if(result){  
-        localStorage.setItem('seller',JSON.stringify(result.body))
+        localStorage.setItem('shipper',JSON.stringify(result.body))
         alert("SignUp Successful...!")
-        this.router.navigate(['shipper-login'])
+        this.router.navigate(['/shipper-login'])
       }
     })
   }
   
-  reloadSeller(){
-    if(localStorage.getItem('seller')){
+  reloadShipper(){
+    if(localStorage.getItem('shipper')){
       this.isShipperLoggedIn.next(true)
-      this.router.navigate(['shipper-login'])
+      this.router.navigate(['/shipper-login'])
     }
   }
 
@@ -43,7 +43,7 @@ export class ShipperService {
        this.isLoginError.emit(false)
        localStorage.setItem('shipper',JSON.stringify(result.body))
        alert("Login Successful...!")
-       this.router.navigate(['shipper-home'])
+       this.router.navigate(['/shipper-home'])
      }else{
        console.warn("login failed");
        alert("Login Failed...!")

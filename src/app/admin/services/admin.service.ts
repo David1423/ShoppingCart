@@ -13,24 +13,26 @@ export class AdminService {
   seller_url:string = 'http://localhost:3000/seller/';
   product_url:string = "http://localhost:3000/products/";
   order_url:string = 'http://localhost:3000/orders';
+  shipper_url:string='http://localhost:3000/shippers';
   
   constructor(private http:HttpClient) { }
 
   getUsers(){
     return this.http.get<Signup[]>(this.user_url);
   }
-
   getSellers(){
     return this.http.get<Signup[]>(this.seller_url);
   }
-
+  getShippers(){
+    return this.http.get<Signup[]>(this.shipper_url);
+  }
   getProducts(){
     return this.http.get<Products[]>(this.product_url);
   }
-
   getOrders(){
     return this.http.get<Order[]>(this.order_url);
   }
+
   deleteUsers(id:number){
     return this.http.delete(`http://localhost:3000/users/${id}`);
   }
@@ -43,6 +45,7 @@ export class AdminService {
   updateUsers(user : Signup){
     return this.http.put<Signup>(`http://localhost:3000/users/${user.id}`,user)
   }
+
   deleteSellers(id:number){
     return this.http.delete(`http://localhost:3000/seller/${id}`);
   }
@@ -54,6 +57,19 @@ export class AdminService {
   }
   updateSellers(seller : Signup){
     return this.http.put<Signup>(`http://localhost:3000/seller/${seller.id}`,seller)
+  }
+
+  deleteShippers(id:number){
+    return this.http.delete(`http://localhost:3000/shippers/${id}`);
+  }
+  shippersList(){
+    return this.http.get<Signup[]>('http://localhost:3000/shippers');
+  }
+  getShipper(id:string){
+    return this.http.get<Signup>(`http://localhost:3000/shippers/${id}`);
+  }
+  updateShippers(shipper : Signup){
+    return this.http.put<Signup>(`http://localhost:3000/shippers/${shipper.id}`,shipper)
   }
   deleteProducts(id:number){
     return this.http.delete(`http://localhost:3000/products/${id}`);

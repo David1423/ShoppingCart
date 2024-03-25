@@ -36,13 +36,19 @@ export class HeaderComponent implements OnInit{
           this.sellerName = sellerData.username;
           this.menuType = 'seller'
         }
-        else if(localStorage.getItem('user')){
+        else if(localStorage.getItem('user') && val.url.includes('user')){
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
           this.userName = userData.username;
           this.menuType = 'user';
           this.productService.getCartList(userData.id);
-        }
+        }else if (localStorage.getItem('shipper') && val.url.includes('shipper')) {
+          let shipperStore = localStorage.getItem('shipper');
+          let shipperData = shipperStore && JSON.parse(shipperStore);
+          this.shipperName = shipperData.username;
+          this.menuType = 'shipper';
+          // Add any additional shipper-specific logic here
+        } 
         else{
           this.menuType = 'default'
         }
@@ -60,6 +66,10 @@ export class HeaderComponent implements OnInit{
   logOut(){
     localStorage.removeItem('seller')
     this.router.navigate(['/'])
+  }
+  shipperLogOut(){
+    localStorage.removeItem('shipper')
+    this.router.navigate(['/shipper-login'])
   }
 
   userLogout(){
