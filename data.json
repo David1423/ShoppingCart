@@ -70,6 +70,18 @@
       "pincode": "600017",
       "mobileNumber": "9790475675",
       "id": "6fdd"
+    },
+    {
+      "id": "8479",
+      "username": "Surya",
+      "password": "Surya@12",
+      "email": "surya@gmail.com",
+      "houseno": "3a/c,",
+      "area": "Sivagi street",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "pincode": "600017",
+      "mobileNumber": "6376895322"
     }
   ],
   "carts": [
@@ -105,6 +117,17 @@
       "quantity": 1,
       "productId": null,
       "userId": null
+    },
+    {
+      "id": "8bb7",
+      "productName": "Bluetooth neck band",
+      "productPrice": 1499,
+      "productCategory": "Electronics",
+      "productDescription": "Bluetooth neck band",
+      "productImage": "https://storage.googleapis.com/shy-pub/34186/1629541896483_neckband.png",
+      "quantity": 1,
+      "productId": "7eb2",
+      "userId": "8479"
     }
   ],
   "orders": [
@@ -135,6 +158,16 @@
       "contact": "7654329753",
       "totalPrice": 90099,
       "userId": "3ded"
+    },
+    {
+      "id": "1367",
+      "email": "surya@gmail.com",
+      "username": "Surya",
+      "address": "3a/c, Sivagi street",
+      "pincode": "600017",
+      "contact": "6376895322",
+      "totalPrice": 71598,
+      "userId": "8479"
     }
   ],
   "shippers": [
