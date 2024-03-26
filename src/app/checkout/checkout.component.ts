@@ -36,8 +36,8 @@ export class CheckoutComponent implements OnInit{
 
       console.warn(window.totalPrice);
     })
-    
   }
+  
   orderNow(data:{email:string,username:string,address:string,pincode:any,contact:string}){
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user).id;

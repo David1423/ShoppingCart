@@ -17,7 +17,7 @@
           <span *ngIf="sellerForm.get('password')?.hasError('minlength')" class="error">Password must be 6 characters long.</span>
         </div>
       </div>
-      <button class="form-button">Login</button>
+      <button class="form-button" [disabled]="sellerForm.invalid">Login</button>
       <p>Don't have account? <a class="auth-toggle-link" (click)="openSignup()">Click for Sign-up</a></p>
 
     </form>
