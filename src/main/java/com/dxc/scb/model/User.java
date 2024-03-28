@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.dxc.scb.model.Address;
 import com.dxc.scb.model.Enums.Role;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -65,6 +66,7 @@ public class User implements UserDetails{
     private Enums.Role role;
 	
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnore
     private Address address;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

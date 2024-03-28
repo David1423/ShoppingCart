@@ -51,7 +51,18 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
-
+    @GetMapping("/{userId}/address")
+    public ResponseEntity<Address> getAddressByUserId(@PathVariable Long userId) {
+        try {
+            // Call the service method to fetch the address by user ID
+            Address address = userService.getAddressByUserId(userId);
+            // Return the address with a 200 OK status
+            return ResponseEntity.ok(address);
+        } catch (RuntimeException e) {
+            // If user is not found, return a 404 Not Found status
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
     @PutMapping("/{userId}")
     public ResponseEntity<Void> updateUser(@PathVariable Long userId, @RequestBody User updatedUser) {
         try {

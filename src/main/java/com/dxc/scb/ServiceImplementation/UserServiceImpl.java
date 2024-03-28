@@ -2,6 +2,7 @@ package com.dxc.scb.ServiceImplementation;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 
 import com.dxc.scb.Repository.UserRepository;
+import com.dxc.scb.model.Address;
 import com.dxc.scb.model.User;
 import com.dxc.scb.Service.UserService;
 
@@ -67,6 +69,21 @@ public class UserServiceImpl implements UserService{
             throw new UsernameNotFoundException("User not found with id: " + userId);
         }
         userRepository.deleteById(userId);
+    }
+    
+    public Address getAddressByUserId(Long userId) {
+        // Retrieve the user by ID
+        Optional<User> optionalUser = userRepository.findById(userId);
+        
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            // Get the address associated with the user
+            Address address = user.getAddress();
+            return address;
+        } else {
+            // Handle case when user is not found
+            throw new RuntimeException("User not found with ID: " + userId);
+        }
     }
 
 	
